@@ -1,0 +1,7 @@
+Suppose we have a system that has 100 users,
+each used has a unique ID,
+and we have a UserService with updateUser(userId) method,
+we need to control the update operation.
+In which, we need to prevent update the same user in the same time,
+which means if we have two threads that are calling updateUser(10), one of them needs to wait until the first one finish its call.
+If we have two threads one is calling for (updateUser(10)) and the second updateUser(20), two threads can run concurrently .
